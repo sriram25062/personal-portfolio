@@ -1,38 +1,66 @@
-# Personal Portfolio
+# Sriram Portfolio
 
-Welcome to my personal portfolio website! This site showcases my skills, projects, experience, and contact information in a modern dark-mode design with a royal purple theme.
+A modern, responsive portfolio website built with React.js and pure CSS.
 
-## 🚀 Features
-- **Dark Mode UI** with a sleek and modern design
-- **Responsive Layout** for seamless viewing on all devices
-- **Smooth Animations** to enhance user experience
-- **Interactive Sections** including Skills, Projects, Experience, and Contact
+## Features
 
-## 🛠️ Technologies Used
-- **Frontend:** HTML, CSS, JavaScript
-- **Styling:** CSS animations and typography enhancements
-- **Deployment:** Hosted for accessibility
+- **Responsive Design**: Fully responsive across all device sizes using CSS Grid and Flexbox
+- **Modern CSS**: Uses CSS variables, animations, and modern styling techniques
+- **Clean Architecture**: Component-based structure for easy maintenance and customization
+- **Smooth Animations**: Subtle animations for enhanced user experience
+- **Accessible**: Built with accessibility in mind
 
-## 📂 Sections
-- **About Me:** Brief introduction and professional background
-- **Skills & Technologies:** Showcasing my technical expertise
-- **Projects:** Displaying my best work with links and descriptions
-- **Experience & Education:** Highlighting my professional journey
-- **Contact:** Easy ways to reach me
+## Sections
 
-## 📸 Preview
+- **Hero**: Eye-catching introduction section
+- **About**: Personal information and statistics
+- **Skills**: Technical skills with progress indicators
+- **Projects**: Portfolio showcasing completed work
+- **Contact**: Contact form and information
+- **Header/Footer**: Navigation and branding
 
-![image](https://github.com/user-attachments/assets/01e88794-b88f-4ada-9434-00e5b59f37c5)
+## Getting Started
 
-## 🔗 Live Demo
-[Portfolio Website Link](https://sriram25062.github.io/personal-portfolio)
+### Prerequisites
 
-## 📬 Contact Me
-If you'd like to connect, feel free to reach out:
-- **Email:** sriramsrie@gmail.com
-- **LinkedIn:** https://www.linkedin.com/in/rsriram25062
-- **GitHub:** https://github.com/sriram25062
+- Node.js (v14 or higher)
+- npm
 
----
+### Installation
 
-Thank you for visiting my portfolio! I’m always looking for exciting opportunities to collaborate and grow.
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### Build
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+## Customization
+
+Update the component files in `src/components/` to add your own content:
+
+- Edit `Hero.js` for your introduction
+- Edit `About.js` for your bio and statistics
+- Edit `Skills.js` for your technical skills
+- Edit `Projects.js` for your project portfolio
+- Edit `Contact.js` for your contact information
+
+## Technologies Used
+
+- React.js
+- CSS3 (Grid, Flexbox, Variables, Animations)
+- HTML5
