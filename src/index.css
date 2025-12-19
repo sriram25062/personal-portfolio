@@ -121,6 +121,19 @@ img {
   color: white;
 }
 
+.btn-accent {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+}
+
+.btn-accent:hover {
+  background-color: var(--primary-dark, #1e40af);
+  color: #fff;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
 /* Animations */
 @keyframes fadeInUp {
   from {
