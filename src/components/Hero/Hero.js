@@ -19,6 +19,9 @@ const Hero = () => {
             <a href="#about" className="btn btn-secondary">
               About Me
             </a>
+            <a href="/resume.pdf" className="btn btn-accent" download>
+              Download Resume
+            </a>
           </div>
           <div className="hero__social">
             <a href="mailto:srirampvrs@gmail.com" className="hero__social-link" aria-label="Email" title="Email">
