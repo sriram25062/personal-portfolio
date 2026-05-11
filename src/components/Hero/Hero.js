@@ -10,7 +10,7 @@ const Hero = () => {
           <h1 className="hero__name">Sriram R</h1>
           <h2 className="hero__title">Full Stack Web Developer</h2>
           <p className="hero__description">
-            Entry-Level Software Engineer | Full Stack Web Developer | React/Angular, Node.js, PostgreSQL & MongoDB
+            Software Engineer | Full Stack Web Developer | React/Angular, Node.js, PostgreSQL & MongoDB
           </p>
           <div className="hero__actions">
             <a href="#projects" className="btn btn-primary">
@@ -24,7 +24,7 @@ const Hero = () => {
             </a>
           </div>
           <div className="hero__social">
-            <a href="mailto:srirampvrs@gmail.com" className="hero__social-link" aria-label="Email" title="Email">
+            <a href="mailto:sriramrajendran.p@gmail.com" className="hero__social-link" aria-label="Email" title="Email">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />

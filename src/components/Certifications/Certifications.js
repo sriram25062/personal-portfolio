@@ -3,17 +3,17 @@ import './Certifications.css';
 
 const Certifications = () => {
   const certifications = [
-    {
-      id: 1,
-      title: 'MERN Stack Development',
-      provider: 'FITA Academy, Velachery',
-      date: 'July - Oct 2025',
-      duration: '3 Months',
-      certificate: 'Certificate No: 33306',
-      description: 'Received hands-on training in MongoDB, Express.js, React.js, and Node.js with real-time project development and deployment practices.',
-      link: 'https://drive.google.com/file/d/1TNeHyLkLEQlQvNT3-DFKsEEcg0KOBZKn/view?usp=sharing',
-      featured: true,
-    },
+    // {
+    //   id: 1,
+    //   title: 'MERN Stack Development',
+    //   provider: 'FITA Academy, Velachery',
+    //   date: 'July - Oct 2025',
+    //   duration: '3 Months',
+    //   certificate: 'Certificate No: 33306',
+    //   description: 'Received hands-on training in MongoDB, Express.js, React.js, and Node.js with real-time project development and deployment practices.',
+    //   link: 'https://drive.google.com/file/d/1TNeHyLkLEQlQvNT3-DFKsEEcg0KOBZKn/view?usp=sharing',
+    //   featured: true,
+    // },
     {
       id: 2,
       title: 'PostgreSQL: Advanced Queries',

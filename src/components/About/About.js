@@ -16,7 +16,7 @@ const About = () => {
               A passionate developer dedicated to building impactful solutions
             </h3>
             <p className="about__description">
-              Entry-level Software Engineer with hands-on experience in designing and developing full-stack web applications using React, Angular, Node.js, PostgreSQL, and MongoDB. Skilled in building frontend and backend components, API integration, code debugging, and modeling relational and non-relational databases. Completed a 3-month MERN Stack certification from FITA Academy. Actively expanding knowledge through real-world projects and formal certifications in web technologies.
+              Full Stack Developer with 2.5+ years of expertise in building scalable web applications using Node.js, Express.js, Angular and PostgreSQL. Skilled in RESTful API development, database optimization, authentication systems, and responsive UI development. Experienced in Agile Scrum environments, production support, debugging and performance optimization.
             </p>
 
             <div className="about__stats" style={{ display: 'none' }}>

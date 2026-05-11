@@ -21,8 +21,8 @@ const Contact = () => {
         </svg>
       ),
       label: 'Email',
-      value: 'srirampvrs@gmail.com',
-      href: 'mailto:srirampvrs@gmail.com',
+      value: 'sriramrajendran.p@gmail.com',
+      href: 'mailto:sriramrajendran.p@gmail.com',
     },
     {
       icon: (

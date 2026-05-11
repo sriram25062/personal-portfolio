@@ -4,24 +4,24 @@ import './Skills.css';
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Programming Languages',
-      skills: ['JavaScript', 'TypeScript', 'Java', 'SQL', 'HTML', 'CSS'],
+      title: 'Backend',
+      skills: ['Node.js', 'Express.js', 'REST API Development', 'JWT Authentication', 'Middleware Integration'],
     },
     {
-      title: 'Frameworks/Libraries',
-      skills: ['React', 'Angular', 'Node.js', 'Express.js'],
+      title: 'Frontend',
+      skills: ['Angular', 'React', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Responsive Web Design'],
     },
     {
       title: 'Databases',
-      skills: ['PostgreSQL', 'MongoDB'],
+      skills: ['PostgreSQL(SQL Queries, Database Optimization, Joins & Indexing)', 'MongoDB'],
     },
     {
-      title: 'Tools',
-      skills: ['Git', 'GitHub', 'Vercel', 'Visual Studio Code', 'Webpack', 'Postman'],
+      title: 'Tools & Technologies',
+      skills: ['Git', 'GitHub', 'Vercel', 'Visual Studio Code', 'Webpack', 'Postman', 'Node Cron'],
     },
     {
       title: 'Core Competencies',
-      skills: ['API integration', 'Debugging', 'SDLC', 'Agile collaboration'],
+      skills: ['API integration', 'Full Stack Web Development', 'CRUD Operations', 'Authentication & Authorization', 'Debugging & Production Support', 'Performance Optimization', 'Agile Scrum Methodology', 'Unit Testing'],
     },
   ];
 

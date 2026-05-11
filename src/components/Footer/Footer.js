@@ -32,7 +32,7 @@ const Footer = () => {
             <h4 className="footer__links-title">Connect</h4>
             <div className="footer__social">
               <a
-                href="mailto:srirampvrs@gmail.com"
+                href="mailto:sriramrajendran.p@gmail.com"
                 className="footer__social-link"
                 aria-label="Email"
               >
