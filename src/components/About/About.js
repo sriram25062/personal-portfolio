@@ -19,17 +19,17 @@ const About = () => {
               Full Stack Developer with 2.5+ years of expertise in building scalable web applications using Node.js, Express.js, Angular and PostgreSQL. Skilled in RESTful API development, database optimization, authentication systems, and responsive UI development. Experienced in Agile Scrum environments, production support, debugging and performance optimization.
             </p>
 
-            <div className="about__stats" style={{ display: 'none' }}>
+            <div className="about__stats" >
               <div className="about__stat">
-                <span className="about__stat-number">5+</span>
+                <span className="about__stat-number">2.5+</span>
                 <span className="about__stat-label">Years Experience</span>
               </div>
               <div className="about__stat">
-                <span className="about__stat-number">50+</span>
+                <span className="about__stat-number">2+</span>
                 <span className="about__stat-label">Projects Completed</span>
               </div>
               <div className="about__stat">
-                <span className="about__stat-number">30+</span>
+                <span className="about__stat-number">2+</span>
                 <span className="about__stat-label">Happy Clients</span>
               </div>
             </div>
