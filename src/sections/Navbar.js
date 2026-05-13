@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenu, HiX } from 'react-icons/hi';
-import { Button } from '../components/common';
+import { Button } from '../common';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

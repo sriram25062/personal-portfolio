@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { SectionTitle, Container, Badge } from '../components/common';
+import { SectionTitle, Container, Badge } from '../common';
 import { portfolioData } from '../data/portfolio';
 
 const Skills = () => {

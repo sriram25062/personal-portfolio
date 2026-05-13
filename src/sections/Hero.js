@@ -3,8 +3,9 @@ import { motion } from 'framer-motion';
 import { HiArrowRight, HiDownload } from 'react-icons/hi';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { MdOutlineEmail } from 'react-icons/md';
-import { Button, Container } from '../components/common';
+import { Button, Container } from '../common';
 import { portfolioData } from '../data/portfolio';
+import profileImage from '../assets/profile.jpg'; 
 
 const Hero = () => {
   const [displayedText, setDisplayedText] = useState('');
@@ -12,7 +13,7 @@ const Hero = () => {
 
   // Typing Effect
   useEffect(() => {
-    const roles = ['Full Stack Developer', 'React Enthusiast', 'Problem Solver', 'Tech Innovator'];
+    const roles = ['Full Stack Developer', 'Node.js Engineer', 'Angular Specialist', 'PostgreSQL Expert'];
     let currentIndex = 0;
     let isDeleting = false;
     let timeout;
@@ -104,7 +105,7 @@ const Hero = () => {
             {/* Main Heading */}
             <motion.div variants={itemVariants} className="space-y-4">
               <h1 className="text-5xl md:text-7xl font-bold">
-                <span className="text-white">Hello, I'm </span>
+                <span className="text-white">Greetings✨, I'm </span>
                 <br />
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                   {portfolioData.personal.name}
@@ -128,7 +129,7 @@ const Hero = () => {
                 </span>
               </p>
               <p className="text-lg text-gray-400 max-w-md">
-                Building modern, performant, and beautiful web experiences with cutting-edge technologies.
+                  Crafting scalable web applications with modern architectures, secure APIs, and seamless digital experiences.
               </p>
             </motion.div>
 
@@ -191,10 +192,15 @@ const Hero = () => {
               animate={{ y: [0, -20, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               className="relative z-10 w-64 h-64 rounded-2xl overflow-hidden border-2 border-cyan-500 border-opacity-50 bg-gradient-to-br from-cyan-500 to-blue-500 p-1"
-            >
-              <div className="w-full h-full rounded-xl bg-dark-900 flex items-center justify-center text-6xl font-bold bg-gradient-to-br from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+            > 
+              <img
+                src={profileImage}
+                alt="Sriram"
+                className="w-full h-full object-cover rounded-xl"
+              />
+              {/* <div className="w-full h-full rounded-xl bg-dark-900 flex items-center justify-center text-6xl font-bold bg-gradient-to-br from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                 SR
-              </div>
+              </div> */}
             </motion.div>
           </motion.div>
         </motion.div>

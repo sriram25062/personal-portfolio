@@ -1,35 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { HiCheck } from 'react-icons/hi';
 import { MdOutlineEmail, MdPhone, MdLocationOn } from 'react-icons/md';
-import { Container, SectionTitle } from '../components/common';
+import { Container, SectionTitle } from '../common';
 import { portfolioData } from '../data/portfolio';
 
 const Contact = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setSubmitted(false);
-    }, 3000);
-  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -92,7 +67,7 @@ const Contact = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          className="grid md:grid-cols-2 gap-12 items-start"
+          className="max-w-2xl mx-auto"
         >
           {/* Contact Information */}
           <motion.div variants={itemVariants} className="space-y-8">
@@ -145,116 +120,6 @@ const Contact = () => {
                 ))}
               </div>
             </div>
-          </motion.div>
-
-          {/* Contact Form */}
-          <motion.div
-            variants={itemVariants}
-            className="relative"
-          >
-            {/* Form Glow */}
-            {!submitted && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl blur-2xl opacity-20"
-              />
-            )}
-
-            <motion.form
-              onSubmit={handleSubmit}
-              className="relative bg-dark-800 border border-dark-700 rounded-xl p-8 space-y-4"
-            >
-              {submitted && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="absolute inset-0 flex items-center justify-center bg-dark-800 bg-opacity-95 rounded-xl backdrop-blur-sm z-50"
-                >
-                  <div className="text-center">
-                    <motion.div
-                      animate={{ scale: [0.8, 1.2, 1] }}
-                      className="w-16 h-16 rounded-full bg-green-500 bg-opacity-20 border-2 border-green-500 flex items-center justify-center mx-auto mb-4"
-                    >
-                      <HiCheck className="w-8 h-8 text-green-400" />
-                    </motion.div>
-                    <p className="text-white font-semibold">Message Sent!</p>
-                    <p className="text-gray-400 text-sm mt-2">I'll get back to you soon.</p>
-                  </div>
-                </motion.div>
-              )}
-
-              {/* Name Field */}
-              <motion.div variants={itemVariants}>
-                <label className="block text-gray-300 text-sm font-medium mb-2">Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full bg-dark-900 border border-dark-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-20 transition-all"
-                  placeholder="Your name"
-                />
-              </motion.div>
-
-              {/* Email Field */}
-              <motion.div variants={itemVariants}>
-                <label className="block text-gray-300 text-sm font-medium mb-2">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full bg-dark-900 border border-dark-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-20 transition-all"
-                  placeholder="your@email.com"
-                />
-              </motion.div>
-
-              {/* Subject Field */}
-              <motion.div variants={itemVariants}>
-                <label className="block text-gray-300 text-sm font-medium mb-2">Subject</label>
-                <input
-                  type="text"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="w-full bg-dark-900 border border-dark-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-20 transition-all"
-                  placeholder="Subject"
-                />
-              </motion.div>
-
-              {/* Message Field */}
-              <motion.div variants={itemVariants}>
-                <label className="block text-gray-300 text-sm font-medium mb-2">Message</label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows="5"
-                  className="w-full bg-dark-900 border border-dark-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-20 transition-all resize-none"
-                  placeholder="Your message..."
-                />
-              </motion.div>
-
-              {/* Submit Button */}
-              <motion.div
-                variants={itemVariants}
-                className="pt-4"
-              >
-                <motion.button
-                  type="submit"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:shadow-glow-lg transition-all duration-300"
-                >
-                  Send Message
-                </motion.button>
-              </motion.div>
-            </motion.form>
           </motion.div>
         </motion.div>
       </Container>

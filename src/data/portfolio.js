@@ -3,10 +3,10 @@ export const portfolioData = {
     name: 'Sriram R',
     title: 'Full Stack Web Developer',
     subtitle: 'Software Engineer | Building Scalable Web Solutions',
-    description: 'Crafting modern, performant web applications with React, Node.js, and PostgreSQL',
+    description: 'Crafting modern, performant web applications with Angular, Node.js, and PostgreSQL',
     location: 'Chennai, India',
     email: 'sriramrajendran.p@gmail.com',
-    phone: '+91 8825854062',
+    phone: '+91 9344991998',
   },
 
   socials: [
@@ -28,14 +28,14 @@ export const portfolioData = {
   ],
 
   about: {
-    heading: 'Transforming Ideas Into Reality',
+    heading: 'Building Scalable Web Apps',
     description:
-      'I\'m a Full Stack Developer with 2.5+ years of experience building scalable web applications. Specializing in modern JavaScript frameworks, backend APIs, and database optimization.',
+      'I\'m a Full Stack Developer with 2.5+ years of experience building scalable web applications using Node.js, Angular, and PostgreSQL. Focused on backend architecture, secure APIs, performance optimization.',
     stats: [
-      { number: '2.5+', label: 'Years Experience' },
-      { number: '5+', label: 'Technologies' },
-      { number: '15+', label: 'Projects Completed' },
-      { number: '100%', label: 'Client Satisfaction' },
+      { number: '3', suffix: '+', label: 'Years Experience' },
+      { number: '6', suffix: '+', label: 'Enterprise Modules' },
+      { number: '20', suffix: '+', label: 'REST APIs Built' },
+      { number: '40', suffix: '%', label: 'Performance Boost' },
     ],
   },
 
@@ -43,7 +43,7 @@ export const portfolioData = {
     categories: [
       {
         name: 'Frontend',
-        skills: ['React.js', 'Angular', 'TypeScript', 'Tailwind CSS', 'Responsive Design', 'Framer Motion'],
+        skills: ['Angular', 'TypeScript', 'React.js', 'Tailwind CSS', 'Responsive Design', 'Framer Motion'],
         color: 'from-blue-500 to-cyan-500',
       },
       {
@@ -58,7 +58,7 @@ export const portfolioData = {
       },
       {
         name: 'Tools & DevOps',
-        skills: ['Git', 'GitHub', 'Vercel', 'VS Code', 'Postman', 'Docker', 'Linux'],
+        skills: ['Git', 'GitHub', 'Node Cron', 'Vercel', 'VS Code', 'Postman', 'Docker', 'Linux'],
         color: 'from-orange-500 to-red-500',
       },
     ],

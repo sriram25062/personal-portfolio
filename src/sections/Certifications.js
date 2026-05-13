@@ -1,13 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { HiExternalLink } from 'react-icons/hi';
 import { MdSchool } from 'react-icons/md';
-import { SectionTitle, Container, Badge } from '../components/common';
+import { SectionTitle, Container, Badge } from '../common';
 import { portfolioData } from '../data/portfolio';
 
 const Certifications = () => {
   const certifications = portfolioData.certifications;
-  const [expandedId, setExpandedId] = React.useState(null);
+  const [hoveredId, setHoveredId] = React.useState(null);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -99,13 +98,15 @@ const Certifications = () => {
 
                     {/* Card */}
                     <motion.div
-                      onClick={() => setExpandedId(expandedId === cert.id ? null : cert.id)}
+                      onClick={() => cert.link && window.open(cert.link, '_blank')}
+                      onMouseEnter={() => setHoveredId(cert.id)}
+                      onMouseLeave={() => setHoveredId(null)}
                       className="relative bg-dark-800 border border-dark-700 group-hover:border-cyan-500 rounded-lg p-6 transition-all duration-300 cursor-pointer h-full backdrop-blur-xl"
                     >
                       <div className="space-y-4">
                         {/* Icon */}
                         <motion.div
-                          animate={expandedId === cert.id ? { rotate: 360 } : {}}
+                          animate={hoveredId === cert.id ? { rotate: 360 } : {}}
                           transition={{ duration: 0.6 }}
                           className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center text-white"
                         >
@@ -122,26 +123,13 @@ const Certifications = () => {
                         {/* Meta */}
                         <div className="flex items-center justify-between text-sm">
                           <span className="text-gray-400">{cert.date}</span>
-                          {cert.link && (
-                            <motion.a
-                              href={cert.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              onClick={(e) => e.stopPropagation()}
-                              whileHover={{ scale: 1.1 }}
-                              whileTap={{ scale: 0.95 }}
-                              className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                            >
-                              <HiExternalLink className="w-5 h-5" />
-                            </motion.a>
-                          )}
                         </div>
                       </div>
 
                       {/* Expand Indicator */}
                       <motion.div
                         className="absolute top-2 right-2 w-1 h-1 rounded-full bg-cyan-400"
-                        animate={expandedId === cert.id ? { scale: 2, opacity: 0 } : { scale: 1, opacity: 1 }}
+                        animate={hoveredId === cert.id ? { scale: 2, opacity: 0 } : { scale: 1, opacity: 1 }}
                         transition={{ duration: 0.6 }}
                       />
                     </motion.div>

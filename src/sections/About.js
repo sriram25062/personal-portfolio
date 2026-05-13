@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SectionTitle, Container, Button } from '../components/common';
+import { SectionTitle, Container, Button } from '../common';
 import { portfolioData } from '../data/portfolio';
 import { HiArrowRight } from 'react-icons/hi';
 
@@ -55,7 +55,7 @@ const About = () => {
               {portfolioData.about.description}
             </p>
             <p className="text-gray-400 leading-relaxed">
-              I specialize in building scalable applications with a focus on clean code, performance optimization, and exceptional user experience. With over 2.5 years of professional experience, I've worked on diverse projects spanning e-commerce, content management, and real-time communication platforms.
+              I specialize in building scalable applications with a focus on clean code, performance optimization, and exceptional user experience. With over 2.5 years of professional experience, I've worked on diverse projects spanning shipment management and healthcare claims processing systems.
             </p>
 
             <motion.a
@@ -90,7 +90,7 @@ const About = () => {
                     transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
                     className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2"
                   >
-                    <CounterAnimation target={parseInt(stat.number)} />
+                    <CounterAnimation target={parseInt(stat.number)} suffix={stat.suffix} />
                   </motion.div>
                   <p className="text-gray-400 text-sm md:text-base font-medium">
                     {stat.label}
@@ -102,7 +102,7 @@ const About = () => {
         </motion.div>
 
         {/* Experience Timeline */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -145,27 +145,62 @@ const About = () => {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
       </Container>
     </section>
   );
 };
 
 // Counter Animation Component
-const CounterAnimation = ({ target }) => {
+const CounterAnimation = ({ target, suffix = '' }) => {
   const [count, setCount] = React.useState(0);
+  const [isVisible, setIsVisible] = React.useState(false);
+  const countRef = React.useRef(0);
+  const elementRef = React.useRef(null);
 
+  // Intersection Observer to detect when element is in view
   React.useEffect(() => {
-    let interval;
-    if (count < target) {
-      interval = setInterval(() => {
-        setCount((prev) => Math.min(prev + 1, target));
-      }, 30);
-    }
-    return () => clearInterval(interval);
-  }, [count, target]);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
 
-  return <>{count}{target === parseInt(target) && (target % 1 !== 0 ? '+' : '')}</>;
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [isVisible]);
+
+  // Start counter animation only when visible
+  React.useEffect(() => {
+    if (!isVisible) return;
+
+    countRef.current = 0;
+    setCount(0);
+    
+    // Much slower for smaller numbers, much faster for larger ones
+    const interval = target < 10 ? 300 : 50;
+    
+    let intervalId = setInterval(() => {
+      countRef.current += 1;
+      if (countRef.current >= target) {
+        setCount(target);
+        clearInterval(intervalId);
+      } else {
+        setCount(countRef.current);
+      }
+    }, interval);
+
+    return () => clearInterval(intervalId);
+  }, [isVisible, target]);
+
+  return <span ref={elementRef}>{count}{suffix}</span>;
 };
 
 export default About;

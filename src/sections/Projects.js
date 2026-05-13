@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { HiArrowRight, HiExternalLink } from 'react-icons/hi';
 import { FaGithub } from 'react-icons/fa';
-import { SectionTitle, Container, Badge } from '../components/common';
+import { SectionTitle, Container, Badge } from '../common';
 import { portfolioData } from '../data/portfolio';
 
 const Projects = () => {

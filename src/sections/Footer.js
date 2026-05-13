@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { HiArrowRight } from 'react-icons/hi';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { MdOutlineEmail } from 'react-icons/md';
-import { Container } from '../components/common';
+import { Container } from '../common';
 import { portfolioData } from '../data/portfolio';
 
 const Footer = () => {
@@ -161,22 +161,11 @@ const Footer = () => {
           {/* Bottom Section */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col md:flex-row items-center justify-between text-sm text-gray-400"
+            className="flex flex-col md:flex-row items-center justify-center text-sm text-gray-400"
           >
             <p>
-              © {currentYear} Sriram R. All rights reserved. Built with React, Tailwind CSS & Framer Motion.
+              © {currentYear} Sriram R. All rights reserved. Built with ❤️.
             </p>
-            <div className="flex items-center gap-4 mt-4 md:mt-0">
-              <motion.a
-                href="https://github.com/sriram25062"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ textDecoration: 'underline' }}
-                className="hover:text-cyan-400 transition-colors"
-              >
-                View Source
-              </motion.a>
-            </div>
           </motion.div>
         </Container>
       </motion.div>
