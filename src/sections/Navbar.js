@@ -83,7 +83,7 @@ const Navbar = () => {
             {/* CTA Button + Mobile Menu */}
             <div className="flex items-center gap-4">
               <motion.a
-                href="mailto:sriramrajendran.p@gmail.com"
+                href="mailto:r.sriramrajendran@gmail.com"
                 whileHover={{ scale: 1.05 }}
                 className="hidden md:block"
               >
@@ -136,7 +136,7 @@ const Navbar = () => {
                   </motion.a>
                 ))}
                 <motion.a
-                  href="mailto:sriramrajendran.p@gmail.com"
+                  href="mailto:r.sriramrajendran@gmail.com"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: navItems.length * 0.05 }}

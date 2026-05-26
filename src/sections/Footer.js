@@ -67,7 +67,7 @@ const Footer = () => {
               I'm always interested in hearing about new projects and opportunities. Feel free to reach out!
             </motion.p>
             <motion.a
-              href="mailto:sriramrajendran.p@gmail.com"
+              href="mailto:r.sriramrajendran@gmail.com"
               whileHover={{ scale: 1.05 }}
               className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:shadow-glow-lg transition-all duration-300"
             >
@@ -130,7 +130,7 @@ const Footer = () => {
                 {[
                   { icon: FaGithub, label: 'GitHub', url: 'https://github.com/sriram25062' },
                   { icon: FaLinkedinIn, label: 'LinkedIn', url: 'https://www.linkedin.com/in/rsriram25062' },
-                  { icon: MdOutlineEmail, label: 'Email', url: 'mailto:sriramrajendran.p@gmail.com' },
+                  { icon: MdOutlineEmail, label: 'Email', url: 'mailto:r.sriramrajendran@gmail.com' },
                 ].map((social) => (
                   <motion.a
                     key={social.label}

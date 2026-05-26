@@ -5,14 +5,14 @@ export const portfolioData = {
     subtitle: 'Software Engineer | Building Scalable Web Solutions',
     description: 'Crafting modern, performant web applications with Angular, Node.js, and PostgreSQL',
     location: 'Chennai, India',
-    email: 'sriramrajendran.p@gmail.com',
-    phone: '+91 9344991998',
+    email: 'r.sriramrajendran@gmail.com',
+    phone: '+91 9150013222',
   },
 
   socials: [
     {
       name: 'Email',
-      url: 'mailto:sriramrajendran.p@gmail.com',
+      url: 'mailto:r.sriramrajendran@gmail.com',
       icon: 'mail',
     },
     {
